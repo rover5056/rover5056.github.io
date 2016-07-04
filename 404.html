@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双飞翼布局</title>
+	<style type="text/css">
+		*{
+	margin:0;
+	padding: 0;
+}
+.header{
+	background-color: yellowgreen;
+	height: 200px;                 
+	text-align: center;
+}
+
+.main{
+	background-color: #C89A4D;
+	height: 300px;
+	width: 100%;                               /*双飞翼主体*/
+	overflow: hidden;                          /*等高布局，超出main部分 hidden*/
+}
+.inner{
+	margin:0 100px 0 160px;
+	background-color: yellow;                   /*中间内容显示*/
+	margin-bottom: -9999px;
+	padding-bottom: 9999px;
+}
+.left{
+	margin-bottom: -9999px;                   /*用无限大的padding保证main部分永远被填满*/
+	padding-bottom: 9999px;
+	width: 160px;
+	background-color: #F6C3C3;
+	float: left;
+	margin-left: -100%;
+	/*position: relative;
+	left:-160px;*/
+}
+.right{
+	margin-bottom: -9999px;
+	padding-bottom: 9999px;
+	width: 100px;
+	float: right;
+	background-color: #F8FDB7;
+	margin-left: -100px;
+	/*position: relative;
+	left:100px;*/
+}
+.middle{
+	margin-bottom: -9999px;
+	padding-bottom: 9999px; 
+	float: left;
+	width: 100%;                              /* 主要部分  主体部分float-left*/
+	background-color: #B098FC;
+}
+.footer{
+	background-color: #FF8FF3;
+	height: 200px;
+	text-align: center;
+}
+	</style>
+</head>
+<body>
+		<div class="header"> 我是头</div>
+		<div class="main">
+			<div class="middle">
+				<div class="inner"> 我是中间  
+				<p>等高布局</p>
+				<p>等高布局</p>
+				<p>等高布局</p>
+				<p>等高布局</p>
+				</div>
+			</div>
+			<div class="left"> 我是左边</div>
+			<div class="right">我是右边</div>
+
+		</div>
+		<div class="footer"> ROVER@制作</div>
+	
+</body>
+</html>
