@@ -1,0 +1,760 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="NEXT主题,个人博客，前端信息，前端技术分享，前端,前端开发,前端工程师,web前端,web前端开发,web前端工程师,前端网站,前端论坛,w3cschool,网站前端开发,javascript视频教程,HTML5视频教程,HTML5游戏,HTML5手机,HTML5应用,HTML5网站,CSS3教程,CSS3视频教程,Node.js安装,Node.js开发,jquery mobile,jquery ui,jquery教程,jquery api前端资源,前端特效,资源下载,前端网,GitHub,HEXO" />
+
+<meta name="title" content="GIT+HEXO 搭建的个人博客 交流,学习 Be better">
+
+<meta name="description" content="布拉德皮蛋,一个有追求的D! 前端路漫漫">
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+
+
+
+
+
+<meta name="description" content="1、对WEB标准以及W3C的理解与认识标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率；使用外链css和js脚本、结构行为表现的分离、文件下载与页面速度更快；内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件；容易维护、改版方便，不需要变动页面内容；提供打印版本而不需要复制内容、提高网站易用性；
+2、xhtml和html有什么区别HTML是一种基本的WEB网页设计语言，XH">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS基础知识点总结">
+<meta property="og:url" content="http://roverk.com/2016/07/19/CSS基础总结/index.html">
+<meta property="og:site_name" content="布拉德皮蛋">
+<meta property="og:description" content="1、对WEB标准以及W3C的理解与认识标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率；使用外链css和js脚本、结构行为表现的分离、文件下载与页面速度更快；内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件；容易维护、改版方便，不需要变动页面内容；提供打印版本而不需要复制内容、提高网站易用性；
+2、xhtml和html有什么区别HTML是一种基本的WEB网页设计语言，XH">
+<meta property="og:updated_time" content="2016-07-20T14:55:50.124Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS基础知识点总结">
+<meta name="twitter:description" content="1、对WEB标准以及W3C的理解与认识标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率；使用外链css和js脚本、结构行为表现的分离、文件下载与页面速度更快；内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件；容易维护、改版方便，不需要变动页面内容；提供打印版本而不需要复制内容、提高网站易用性；
+2、xhtml和html有什么区别HTML是一种基本的WEB网页设计语言，XH">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://roverk.com/2016/07/19/CSS基础总结/"/>
+
+  <title> CSS基础知识点总结 | 布拉德皮蛋 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?f31e61a3d07d1e422325bde3a30f5e75";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">布拉德皮蛋</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">做一个有追求的D</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS基础知识点总结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-19T22:32:07+08:00" content="2016-07-19">
+              2016-07-19
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/19/CSS基础总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/19/CSS基础总结/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/07/19/CSS基础总结/" class="leancloud_visitors" data-flag-title="CSS基础知识点总结">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h6 id="1、对WEB标准以及W3C的理解与认识"><a href="#1、对WEB标准以及W3C的理解与认识" class="headerlink" title="1、对WEB标准以及W3C的理解与认识"></a>1、对WEB标准以及W3C的理解与认识</h6><p>标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率；<br>使用外链css和js脚本、结构行为表现的分离、文件下载与页面速度更快；<br>内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件；<br>容易维护、改版方便，不需要变动页面内容；<br>提供打印版本而不需要复制内容、提高网站易用性；</p>
+<h6 id="2、xhtml和html有什么区别"><a href="#2、xhtml和html有什么区别" class="headerlink" title="2、xhtml和html有什么区别"></a>2、xhtml和html有什么区别</h6><p>HTML是一种基本的WEB网页设计语言，XHTML是一个基于XML的置标语言；</p>
+<p>最主要的不同：<br>XHTML 元素必须被正确地嵌套。<br>XHTML 元素必须被关闭。<br>XHTML 标签名必须用小写字母。<br>XHTML 文档必须拥有根元素。</p>
+<h6 id="3、Doctype-严格模式与混杂模式-如何触发这两种模式，区分它们有何意义"><a href="#3、Doctype-严格模式与混杂模式-如何触发这两种模式，区分它们有何意义" class="headerlink" title="3、Doctype? 严格模式与混杂模式-如何触发这两种模式，区分它们有何意义?"></a>3、Doctype? 严格模式与混杂模式-如何触发这两种模式，区分它们有何意义?</h6><p>用于声明文档使用那种规范（html/Xhtml）一般为 ：严格 、过度、基于框架的html文档；</p>
+<p>加入XMl声明可触发，解析方式更改为IE5.5拥有IE5.5的bug；</p>
+<h6 id="4、行内元素有哪些？块级元素有哪些？CSS的盒模型？"><a href="#4、行内元素有哪些？块级元素有哪些？CSS的盒模型？" class="headerlink" title="4、行内元素有哪些？块级元素有哪些？CSS的盒模型？"></a>4、行内元素有哪些？块级元素有哪些？CSS的盒模型？</h6><p>块级元素：div p h1 h2 h3 h4 form ul<br>行内元素：a b br i span input select<br>Css盒模型：内容，border,margin，padding</p>
+<h6 id="5、CSS引入的方式有哪些-link和-import的区别是"><a href="#5、CSS引入的方式有哪些-link和-import的区别是" class="headerlink" title="5、CSS引入的方式有哪些? link和@import的区别是?"></a>5、CSS引入的方式有哪些? link和@import的区别是?</h6><p>引入方式：内联、内嵌、外链、导入</p>
+<p>link和@import区别 ：</p>
+<p>同时加载；<br>前者无兼容性，后者CSS2.1以下浏览器不支持；<br>Link支持使用javascript改变样式，后者不可；</p>
+<h6 id="6、CSS选择符有哪些？哪些属性可以继承？优先级算法如何计算？内联和important哪个优先级高？"><a href="#6、CSS选择符有哪些？哪些属性可以继承？优先级算法如何计算？内联和important哪个优先级高？" class="headerlink" title="6、CSS选择符有哪些？哪些属性可以继承？优先级算法如何计算？内联和important哪个优先级高？"></a>6、CSS选择符有哪些？哪些属性可以继承？优先级算法如何计算？内联和important哪个优先级高？</h6><p>选择符：标签选择符、类选择符、id选择符；</p>
+<p>继承不如指定Id&gt;class&gt;标签选择</p>
+<p>内联和important优先级哪个高：important优先级高</p>
+<h6 id="7、前端页面有哪三层构成，分别是什么？作用是什么？"><a href="#7、前端页面有哪三层构成，分别是什么？作用是什么？" class="headerlink" title="7、前端页面有哪三层构成，分别是什么？作用是什么？"></a>7、前端页面有哪三层构成，分别是什么？作用是什么？</h6><p>结构层：Html<br>表示层：CSS<br>行为层： js</p>
+<h6 id="8、css的基本语句构成是？"><a href="#8、css的基本语句构成是？" class="headerlink" title="8、css的基本语句构成是？"></a>8、css的基本语句构成是？</h6><p>选择器{属性1:值1;属性2:值2;……}</p>
+<h6 id="9、你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么"><a href="#9、你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么" class="headerlink" title="9、你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么?"></a>9、你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么?</h6><p>IE(IE内核)、火狐（Gecko）、谷歌（webkit）、opear(Presto) </p>
+<h6 id="10、写出几种IE6-BUG的解决方法"><a href="#10、写出几种IE6-BUG的解决方法" class="headerlink" title="10、写出几种IE6 BUG的解决方法"></a>10、写出几种IE6 BUG的解决方法</h6><p>双边距BUG：float引起的，使用display；<br>像素问题：使用float引起的，使用dislpay:inline -3px；<br>超链接hover点击后失效：使用正确的书写顺序 linkvisited hover activen<br>IE z-index问题：给父级添加position:relative<br>Png 透明：使用js代码改<br>Min-height 最小高度 ！Important 解决’<br>select 在ie6下遮盖：使用iframe嵌套；<br>为什么没有办法定义1px左右的宽度容器(IE6默认的行高造成的，使用over:hidden,zoom:0.08line-height:1px)</p>
+<h6 id="11、标签上title与alt属性的区别是什么？"><a href="#11、标签上title与alt属性的区别是什么？" class="headerlink" title="11、标签上title与alt属性的区别是什么？"></a>11、<img>标签上title与alt属性的区别是什么？</h6><p>Alt ：当图片不显示是用文字代表。<br>Title ：为该属性提供信息</p>
+<h6 id="12、描述css-reset的作用和用途。"><a href="#12、描述css-reset的作用和用途。" class="headerlink" title="12、描述css reset的作用和用途。"></a>12、描述css reset的作用和用途。</h6><p>css reset的作用：Reset重置浏览器的css默认属性；</p>
+<p>用途：浏览器的品种不同，样式不同，然后重置，让他们统一；</p>
+<h6 id="13、解释css-sprites，如何使用。"><a href="#13、解释css-sprites，如何使用。" class="headerlink" title="13、解释css sprites，如何使用。"></a>13、解释css sprites，如何使用。</h6><p>css sprites：把一堆小的图片整合到一张大的图片上，减轻服务器对图片的请求数量</p>
+<h6 id="14、浏览器标准模式和怪异模式之间的区别是什么？"><a href="#14、浏览器标准模式和怪异模式之间的区别是什么？" class="headerlink" title="14、浏览器标准模式和怪异模式之间的区别是什么？"></a>14、浏览器标准模式和怪异模式之间的区别是什么？</h6><p>盒子模型 渲染模式的不同<br>使用window.top.document.compatMode 可显示为什么模式 </p>
+<h6 id="15、你如何对网站的文件和资源进行优化？期待的解决方案包括："><a href="#15、你如何对网站的文件和资源进行优化？期待的解决方案包括：" class="headerlink" title="15、你如何对网站的文件和资源进行优化？期待的解决方案包括："></a>15、你如何对网站的文件和资源进行优化？期待的解决方案包括：</h6><p>文件合并<br>文件最小化/文件压缩<br>使用CDN托管<br>缓存的使用</p>
+<h6 id="16、什么是语义化的HTML？"><a href="#16、什么是语义化的HTML？" class="headerlink" title="16、什么是语义化的HTML？"></a>16、什么是语义化的HTML？</h6><p>直观的认识标签 ，对于搜索引擎的抓取有好处</p>
+<h6 id="17、清除浮动的几种方式，各自的优缺点"><a href="#17、清除浮动的几种方式，各自的优缺点" class="headerlink" title="17、清除浮动的几种方式，各自的优缺点"></a>17、清除浮动的几种方式，各自的优缺点</h6><p>使用空标签清除浮动clear:both（理论上能清楚任何标签，，，增加无意义的标签）<br>使用overflow:auto（空标签元素清除浮动而不得不增加无意代码的弊端,使用zoom:1用于兼容IE）<br>是用afert伪元素清除浮动(用于非IE浏览器)</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/18/最后谈一次居中/" rel="next" title="最后谈一次居中">
+                <i class="fa fa-chevron-left"></i> 最后谈一次居中
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/19/CSS基础总结/"
+           data-title="CSS基础知识点总结" data-url="http://roverk.com/2016/07/19/CSS基础总结/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/head_icon.jpg"
+               alt="ROVER" />
+          <p class="site-author-name" itemprop="name">ROVER</p>
+          <p class="site-description motion-element" itemprop="description">做一个有追求的D</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#1、对WEB标准以及W3C的理解与认识"><span class="nav-number">1.</span> <span class="nav-text">1、对WEB标准以及W3C的理解与认识</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2、xhtml和html有什么区别"><span class="nav-number">2.</span> <span class="nav-text">2、xhtml和html有什么区别</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3、Doctype-严格模式与混杂模式-如何触发这两种模式，区分它们有何意义"><span class="nav-number">3.</span> <span class="nav-text">3、Doctype? 严格模式与混杂模式-如何触发这两种模式，区分它们有何意义?</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4、行内元素有哪些？块级元素有哪些？CSS的盒模型？"><span class="nav-number">4.</span> <span class="nav-text">4、行内元素有哪些？块级元素有哪些？CSS的盒模型？</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5、CSS引入的方式有哪些-link和-import的区别是"><span class="nav-number">5.</span> <span class="nav-text">5、CSS引入的方式有哪些? link和@import的区别是?</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#6、CSS选择符有哪些？哪些属性可以继承？优先级算法如何计算？内联和important哪个优先级高？"><span class="nav-number">6.</span> <span class="nav-text">6、CSS选择符有哪些？哪些属性可以继承？优先级算法如何计算？内联和important哪个优先级高？</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#7、前端页面有哪三层构成，分别是什么？作用是什么？"><span class="nav-number">7.</span> <span class="nav-text">7、前端页面有哪三层构成，分别是什么？作用是什么？</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#8、css的基本语句构成是？"><span class="nav-number">8.</span> <span class="nav-text">8、css的基本语句构成是？</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#9、你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么"><span class="nav-number">9.</span> <span class="nav-text">9、你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么?</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#10、写出几种IE6-BUG的解决方法"><span class="nav-number">10.</span> <span class="nav-text">10、写出几种IE6 BUG的解决方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#11、标签上title与alt属性的区别是什么？"><span class="nav-number">11.</span> <span class="nav-text">11、标签上title与alt属性的区别是什么？</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#12、描述css-reset的作用和用途。"><span class="nav-number">12.</span> <span class="nav-text">12、描述css reset的作用和用途。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#13、解释css-sprites，如何使用。"><span class="nav-number">13.</span> <span class="nav-text">13、解释css sprites，如何使用。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#14、浏览器标准模式和怪异模式之间的区别是什么？"><span class="nav-number">14.</span> <span class="nav-text">14、浏览器标准模式和怪异模式之间的区别是什么？</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#15、你如何对网站的文件和资源进行优化？期待的解决方案包括："><span class="nav-number">15.</span> <span class="nav-text">15、你如何对网站的文件和资源进行优化？期待的解决方案包括：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#16、什么是语义化的HTML？"><span class="nav-number">16.</span> <span class="nav-text">16、什么是语义化的HTML？</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#17、清除浮动的几种方式，各自的优缺点"><span class="nav-number">17.</span> <span class="nav-text">17、清除浮动的几种方式，各自的优缺点</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ROVER</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">ROVER</a> 提供支持<(￣ˇ￣)/
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="/cross.html">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"roverk"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("04UOIOSVxMIXry5PTLcNda02-gzGzoHsz", "nmOv88975Di5DDS9UXCu9Kob");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
