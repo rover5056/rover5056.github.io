@@ -86,25 +86,16 @@
 
 
 
-<meta name="description" content="昨天做一个小页面，一个简单的背景图适应问题调试了很久，简直上头，最后研究出几个方法，可以在不同的情况下使用。&amp;lt;!-more-&amp;gt;
-
-1.图片大小随着浏览器大小按比例缩放：这个看了一圈还是bootstrap的栅格系统在这种需求下比较好用，注意一个很重要的问题就是，一定要给图片加一个width:100%;其他的看看API就知道了。
-2.图片大小不变，随着浏览器的变化展示相应区域。（当前很流">
+<meta name="description" content="昨天做一个小页面，一个简单的背景图适应问题调试了很久，简直上头，最后研究出几个方法，可以在不同的情况下使用。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="background自适应">
 <meta property="og:url" content="http://roverk.com/2016/07/26/back/index.html">
 <meta property="og:site_name" content="布拉德皮蛋">
-<meta property="og:description" content="昨天做一个小页面，一个简单的背景图适应问题调试了很久，简直上头，最后研究出几个方法，可以在不同的情况下使用。&amp;lt;!-more-&amp;gt;
-
-1.图片大小随着浏览器大小按比例缩放：这个看了一圈还是bootstrap的栅格系统在这种需求下比较好用，注意一个很重要的问题就是，一定要给图片加一个width:100%;其他的看看API就知道了。
-2.图片大小不变，随着浏览器的变化展示相应区域。（当前很流">
-<meta property="og:updated_time" content="2016-07-25T16:22:17.552Z">
+<meta property="og:description" content="昨天做一个小页面，一个简单的背景图适应问题调试了很久，简直上头，最后研究出几个方法，可以在不同的情况下使用。">
+<meta property="og:updated_time" content="2016-07-25T16:23:30.400Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="background自适应">
-<meta name="twitter:description" content="昨天做一个小页面，一个简单的背景图适应问题调试了很久，简直上头，最后研究出几个方法，可以在不同的情况下使用。&amp;lt;!-more-&amp;gt;
-
-1.图片大小随着浏览器大小按比例缩放：这个看了一圈还是bootstrap的栅格系统在这种需求下比较好用，注意一个很重要的问题就是，一定要给图片加一个width:100%;其他的看看API就知道了。
-2.图片大小不变，随着浏览器的变化展示相应区域。（当前很流">
+<meta name="twitter:description" content="昨天做一个小页面，一个简单的背景图适应问题调试了很久，简直上头，最后研究出几个方法，可以在不同的情况下使用。">
 
 
 
@@ -363,8 +354,9 @@
 
       
         <blockquote>
-<p>昨天做一个小页面，一个简单的背景图适应问题调试了很久，简直上头，最后研究出几个方法，可以在不同的情况下使用。<br>&lt;!-more-&gt;</p>
+<p>昨天做一个小页面，一个简单的背景图适应问题调试了很久，简直上头，最后研究出几个方法，可以在不同的情况下使用。</p>
 </blockquote>
+<a id="more"></a>
 <h5 id="1-图片大小随着浏览器大小按比例缩放："><a href="#1-图片大小随着浏览器大小按比例缩放：" class="headerlink" title="1.图片大小随着浏览器大小按比例缩放："></a>1.图片大小随着浏览器大小按比例缩放：</h5><p>这个看了一圈还是bootstrap的栅格系统在这种需求下比较好用，注意一个很重要的问题就是，一定要给图片加一个width:100%;其他的看看API就知道了。</p>
 <h5 id="2-图片大小不变，随着浏览器的变化展示相应区域。（当前很流行的一种网页形式就是满屏大图）"><a href="#2-图片大小不变，随着浏览器的变化展示相应区域。（当前很流行的一种网页形式就是满屏大图）" class="headerlink" title="2.图片大小不变，随着浏览器的变化展示相应区域。（当前很流行的一种网页形式就是满屏大图）"></a>2.图片大小不变，随着浏览器的变化展示相应区域。（当前很流行的一种网页形式就是满屏大图）</h5><p>核心方法：使用background-size 属性，填充整个viewport</p>
 <p>当css属性background-size 值为cover时，浏览器会自动按比例缩放背景图的宽和高，直到大于或等于viewport的宽和高</p>
