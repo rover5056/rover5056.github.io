@@ -86,16 +86,25 @@
 
 
 
-<meta name="description" content="昨天做一个小页面，一个简单的背景图适应问题调试了很久，简直上头，最后研究出几个方法，可以在不同的情况下使用。">
+<meta name="description" content="昨天做一个小页面，一个简单的背景图适应问题调试了很久，简直上头，最后研究出几个方法，可以在不同的情况下使用。&amp;lt;!-more-&amp;gt;
+
+1.图片大小随着浏览器大小按比例缩放：这个看了一圈还是bootstrap的栅格系统在这种需求下比较好用，注意一个很重要的问题就是，一定要给图片加一个width:100%;其他的看看API就知道了。
+2.图片大小不变，随着浏览器的变化展示相应区域。（当前很流">
 <meta property="og:type" content="article">
 <meta property="og:title" content="background自适应">
 <meta property="og:url" content="http://roverk.com/2016/07/26/back/index.html">
 <meta property="og:site_name" content="布拉德皮蛋">
-<meta property="og:description" content="昨天做一个小页面，一个简单的背景图适应问题调试了很久，简直上头，最后研究出几个方法，可以在不同的情况下使用。">
-<meta property="og:updated_time" content="2016-07-25T16:18:40.961Z">
+<meta property="og:description" content="昨天做一个小页面，一个简单的背景图适应问题调试了很久，简直上头，最后研究出几个方法，可以在不同的情况下使用。&amp;lt;!-more-&amp;gt;
+
+1.图片大小随着浏览器大小按比例缩放：这个看了一圈还是bootstrap的栅格系统在这种需求下比较好用，注意一个很重要的问题就是，一定要给图片加一个width:100%;其他的看看API就知道了。
+2.图片大小不变，随着浏览器的变化展示相应区域。（当前很流">
+<meta property="og:updated_time" content="2016-07-25T16:22:17.552Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="background自适应">
-<meta name="twitter:description" content="昨天做一个小页面，一个简单的背景图适应问题调试了很久，简直上头，最后研究出几个方法，可以在不同的情况下使用。">
+<meta name="twitter:description" content="昨天做一个小页面，一个简单的背景图适应问题调试了很久，简直上头，最后研究出几个方法，可以在不同的情况下使用。&amp;lt;!-more-&amp;gt;
+
+1.图片大小随着浏览器大小按比例缩放：这个看了一圈还是bootstrap的栅格系统在这种需求下比较好用，注意一个很重要的问题就是，一定要给图片加一个width:100%;其他的看看API就知道了。
+2.图片大小不变，随着浏览器的变化展示相应区域。（当前很流">
 
 
 
@@ -353,30 +362,38 @@
       
 
       
-        <p>昨天做一个小页面，一个简单的背景图适应问题调试了很久，简直上头，最后研究出几个方法，可以在不同的情况下使用。<br><a id="more"></a><br>1.图片大小随着浏览器大小按比例缩放：</p>
-<p>这个看了一圈还是bootstrap的栅格系统在这种需求下比较好用，注意一个很重要的问题就是，一定要给图片加一个width:100%;其他的看看API就知道了。</p>
-<p>2.图片大小不变，随着浏览器的变化展示相应区域。（当前很流行的一种网页形式就是满屏大图）</p>
-<p>核心方法：使用background-size 属性，填充整个viewport</p>
+        <blockquote>
+<p>昨天做一个小页面，一个简单的背景图适应问题调试了很久，简直上头，最后研究出几个方法，可以在不同的情况下使用。<br>&lt;!-more-&gt;</p>
+</blockquote>
+<h5 id="1-图片大小随着浏览器大小按比例缩放："><a href="#1-图片大小随着浏览器大小按比例缩放：" class="headerlink" title="1.图片大小随着浏览器大小按比例缩放："></a>1.图片大小随着浏览器大小按比例缩放：</h5><p>这个看了一圈还是bootstrap的栅格系统在这种需求下比较好用，注意一个很重要的问题就是，一定要给图片加一个width:100%;其他的看看API就知道了。</p>
+<h5 id="2-图片大小不变，随着浏览器的变化展示相应区域。（当前很流行的一种网页形式就是满屏大图）"><a href="#2-图片大小不变，随着浏览器的变化展示相应区域。（当前很流行的一种网页形式就是满屏大图）" class="headerlink" title="2.图片大小不变，随着浏览器的变化展示相应区域。（当前很流行的一种网页形式就是满屏大图）"></a>2.图片大小不变，随着浏览器的变化展示相应区域。（当前很流行的一种网页形式就是满屏大图）</h5><p>核心方法：使用background-size 属性，填充整个viewport</p>
 <p>当css属性background-size 值为cover时，浏览器会自动按比例缩放背景图的宽和高，直到大于或等于viewport的宽和高</p>
 <p>使用媒体查询为移动设备提供更小尺寸的背景图</p>
 <p>为什么要给移动设备提供小尺寸背景图呢？在demo中，我们看到的背景图的实际尺寸为5498px * 3615px，使用这么大尺寸图片的目的是满足绝大多数宽屏显示器，并且不会显示模糊，而代价就是1.7MB的图片体积。</p>
 <p>但是在移动设备上没有必要使用这么大的图片，同时大图还会导致加载变慢，尤其是在移动网络下。</p>
 <p>需要说明的是：为移动设备提供小背景图对该技术方案来说是可选的。</p>
-<p>body {<br>/<em> 加载背景图 </em>/<br>background-image: url(images/background-photo.jpg);</p>
-<p>/<em> 背景图垂直、水平均居中 </em>/<br>background-position: center center;</p>
-<p>/<em> 背景图不平铺 </em>/<br>background-repeat: no-repeat;</p>
-<p>/<em> 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 </em>/<br>background-attachment: fixed;</p>
-<p>/<em> 让背景图基于容器大小伸缩 </em>/<br>background-size: cover;</p>
-<p>/<em> 设置背景颜色，背景图加载过程中会显示背景色 </em>/<br>background-color: #464646;<br>}<br>上面最重要的一条就是：</p>
-<p>background-size: cover;<br>这样浏览器就会按比例缩放背景图直至背景图宽高不小于容器的宽高（在上面的例子中，就是body标签）。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line"><span class="comment">/* 加载背景图 */</span></div><div class="line"><span class="attribute">background-image</span>: <span class="built_in">url</span>(images/background-photo.jpg);</div><div class="line"></div><div class="line"><span class="comment">/* 背景图垂直、水平均居中 */</span></div><div class="line"><span class="attribute">background-position</span>: center center;</div><div class="line"></div><div class="line"><span class="comment">/* 背景图不平铺 */</span></div><div class="line"><span class="attribute">background-repeat</span>: no-repeat;</div><div class="line"></div><div class="line"><span class="comment">/* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */</span></div><div class="line"><span class="attribute">background-attachment</span>: fixed;</div><div class="line"></div><div class="line"><span class="comment">/* 让背景图基于容器大小伸缩 */</span></div><div class="line"><span class="attribute">background-size</span>: cover;</div><div class="line"></div><div class="line"><span class="comment">/* 设置背景颜色，背景图加载过程中会显示背景色 */</span></div><div class="line"><span class="attribute">background-color</span>: <span class="number">#464646</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面最重要的一条就是：</p>
+<blockquote>
+<p>background-size: cover;</p>
+</blockquote>
+<p>这样浏览器就会按比例缩放背景图直至背景图宽高不小于容器的宽高（在上面的例子中，就是body标签）。</p>
 <p>这里需要注意的一点就是：如果背景图小于body标签的尺寸（例如在高分辨率显示器上，或页面内容特别多时），浏览器会拉伸图片。我们都知道，当把一个图片拉伸时，图片会变模糊。</p>
 <p>因此，在选择背景图时，要特别注意尺寸。为了照顾到大尺寸屏幕，demo里用的图片尺寸为5498px * 3615px 。</p>
 <p>同时，为了让背景图始终相对于viewport居中，我们声明了：</p>
-<p>background-position: center center;<br>上面的规则会把背景图缩放的原点定位到viewport的中心。</p>
+<blockquote>
+<p>background-position: center center;</p>
+</blockquote>
+<p>上面的规则会把背景图缩放的原点定位到viewport的中心。</p>
 <p>接下来我们需要解决的问题是：当内容的高度大于viewport的高度时，会出现滚动条。我们希望背景图始终相对于viewport固定，即使用户滚动时也是一样。</p>
 <p>解决办法就是：</p>
-<p>background-attachment: fixed;<br>在小屏幕移动端，只要用媒体查询给一个小一点的图片就行了。</p>
+<blockquote>
+<p>background-attachment: fixed;</p>
+</blockquote>
+<hr>
+<p>在小屏幕移动端，只要用媒体查询给一个小一点的图片就行了。</p>
 <p>就这样吧，最近也比较累。老大让我看的iscroll还没看懂，捉急中。</p>
+<hr>
 <p>（<span style="color: blueviolet;">PS：顺手写了个时钟，没事的可以去DEMO集合里看看…以后会放一些自己写的DEMO，大家随意看看吧</span>）</p>
 
       
@@ -532,7 +549,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-图片大小随着浏览器大小按比例缩放："><span class="nav-number">1.</span> <span class="nav-text">1.图片大小随着浏览器大小按比例缩放：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-图片大小不变，随着浏览器的变化展示相应区域。（当前很流行的一种网页形式就是满屏大图）"><span class="nav-number">2.</span> <span class="nav-text">2.图片大小不变，随着浏览器的变化展示相应区域。（当前很流行的一种网页形式就是满屏大图）</span></a></li></ol></div>
             
           </div>
         </section>
