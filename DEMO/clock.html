@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload=function(){
+	function oclock(){
+			var canvas=document.getElementById('cs');
+			var gt=canvas.getContext('2d');
+			var num=0;
+			var time=new Date();
+			var hours=time.getHours();
+			var minutes=time.getMinutes();
+			var seconds=time.getSeconds();
+			var hoursArc=(-90+hours*30+minutes/2)*Math.PI/180;
+			var minutArc=(-90+minutes*6)*Math.PI/180;
+			var secondArc=(-90+seconds*6)*Math.PI/180;
+			gt.clearRect(0,0,canvas.width,canvas.height)
+
+			//外表盘
+			gt.beginPath();
+			for(var i=0;i<60;i++){
+				num++;
+				gt.moveTo(200,200);
+				gt.arc(200,200,150,6*i*Math.PI/180,6*(i+1)*Math.PI/180,false);
+				gt.stroke();
+			}
+
+			gt.beginPath();
+			gt.fillStyle='white';
+			gt.arc(200,200,140,0,360*Math.PI/180,false);
+			gt.fill();
+			//内表盘
+			gt.beginPath();
+			for(var i=0;i<12;i++){
+				num++;
+				gt.moveTo(200,200);
+				gt.arc(200,200,150,30*i*Math.PI/180,30*(i+1)*Math.PI/180,false);
+				gt.stroke();
+			}
+			gt.beginPath();
+			gt.fillStyle='white';
+			gt.arc(200,200,130,0,360*Math.PI/180,false);
+			gt.fill();
+			//时针
+			gt.beginPath();
+			gt.moveTo(200,200);
+			gt.lineWidth=5
+			gt.arc(200,200,70,hoursArc,hoursArc,false);
+			gt.stroke();
+
+			//分针
+			gt.beginPath();
+			gt.moveTo(200,200);
+			gt.lineWidth=3
+			gt.arc(200,200,100,minutArc,minutArc,false);
+			gt.stroke();
+			//秒针
+			gt.beginPath();
+			gt.moveTo(200,200);
+			gt.lineWidth=1
+			gt.arc(200,200,120,secondArc,secondArc,false);
+			gt.stroke();
+
+
+}
+oclock();
+setInterval(oclock,1000);
+
+
+
+
+
+		}
+	</script>
+</head>
+<body style="background:black">
+	<canvas id="cs" width="400" height="400" style="background:white"></canvas>
+</body>
+</html>
