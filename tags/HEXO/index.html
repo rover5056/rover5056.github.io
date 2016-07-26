@@ -450,11 +450,8 @@
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
-  }
-</script>
-
-<script>
-(function(){
+  };
+  (function(){
     var bp = document.createElement('script');
     var curProtocol = window.location.protocol.split(':')[0];
     if (curProtocol === 'https') {
@@ -467,6 +464,7 @@
     s.parentNode.insertBefore(bp, s);
 })();
 </script>
+
 
 
 
