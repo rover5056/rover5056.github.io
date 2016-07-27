@@ -1,0 +1,817 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="CSS3," />
+
+<meta name="title" content="GIT+HEXO 搭建的个人博客 交流,学习 Be better">
+
+<meta name="description" content="布拉德皮蛋,一个有追求的D! 前端路漫漫">
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+
+
+
+
+
+<meta name="description" content="关于Reset CSS的类似问题还有很多，Reset.css极其简单又极其复杂，首先Reset CSS你要找寻适合自己的，适合项目的。这就是只选对的，不选”贵”的,”贵”这里指的是代码的冗余所造成的不必要的浪费。
+当今流行的浏览器(如:Firefox、Opera、Internet Explorer、Chrome、Safari等等)中，有一些都是以自己的方式去理解CSS规范，这就会导致有的浏览器对C">
+<meta property="og:type" content="article">
+<meta property="og:title" content="reset">
+<meta property="og:url" content="http://roverk.com/2016/07/27/reset/index.html">
+<meta property="og:site_name" content="布拉德皮蛋">
+<meta property="og:description" content="关于Reset CSS的类似问题还有很多，Reset.css极其简单又极其复杂，首先Reset CSS你要找寻适合自己的，适合项目的。这就是只选对的，不选”贵”的,”贵”这里指的是代码的冗余所造成的不必要的浪费。
+当今流行的浏览器(如:Firefox、Opera、Internet Explorer、Chrome、Safari等等)中，有一些都是以自己的方式去理解CSS规范，这就会导致有的浏览器对C">
+<meta property="og:updated_time" content="2016-07-27T15:20:15.917Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="reset">
+<meta name="twitter:description" content="关于Reset CSS的类似问题还有很多，Reset.css极其简单又极其复杂，首先Reset CSS你要找寻适合自己的，适合项目的。这就是只选对的，不选”贵”的,”贵”这里指的是代码的冗余所造成的不必要的浪费。
+当今流行的浏览器(如:Firefox、Opera、Internet Explorer、Chrome、Safari等等)中，有一些都是以自己的方式去理解CSS规范，这就会导致有的浏览器对C">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://roverk.com/2016/07/27/reset/"/>
+
+  <title> reset | 布拉德皮蛋 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?f31e61a3d07d1e422325bde3a30f5e75";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">布拉德皮蛋</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">做一个有追求的D</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-demo">
+          <a href="/DEMO" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-rebel"></i> <br />
+            
+            DEMO合集
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                reset
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-27T23:07:21+08:00" content="2016-07-27">
+              2016-07-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/CSS3/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS3</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/27/reset/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/27/reset/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/07/27/reset/" class="leancloud_visitors" data-flag-title="reset">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>关于Reset CSS的类似问题还有很多，Reset.css极其简单又极其复杂，首先Reset CSS你要找寻适合自己的，适合项目的。这就是只选对的，不选”贵”的,”贵”这里指的是代码的冗余所造成的不必要的浪费。</p>
+<p>当今流行的浏览器(如:Firefox、Opera、Internet Explorer、Chrome、Safari等等)中，有一些都是以自己的方式去理解CSS规范，这就会导致有的浏览器对CSS的解释与设计师的CSS定义初衷相冲突，使得网页的样子在某些浏览器下能正确按照设计师的想法显示，但有些浏览器却并没有按照设计师想要的样子显示出来，这就导致浏览器的兼容性问题。更糟的是，有的浏览器完全无视CSS的一些声明和属性。<br><a id="more"></a></p>
+<p>　　正因为上述冲突和问题依然存在于这个”不完美的世界”，所以一些设计师想到了一种避免浏览器兼容性问题的方法，那就是CSS Reset，什么是CSS Reset？我们可以把它叫做CSS重设，也有人叫做CSS复位、默认CSS、CSS重置等。CSS重设就是由于各种浏览器解释CSS样式的初始值有所不同，导致设计师在没有定义某个CSS属性时，不同的浏览器会按照自己的默认值来为没有定义的样式赋值，所以我们要先定义好一些CSS样式，来让所有浏览器都按照同样的规则解释CSS，这样就能避免发生这种问题。
+　　</p>
+<hr>
+<h5 id="一-最简化的CSS-Reset-无敌小白版"><a href="#一-最简化的CSS-Reset-无敌小白版" class="headerlink" title="　　一.最简化的CSS Reset(无敌小白版) :"></a>　　一.最简化的CSS Reset(无敌小白版) :</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">* &#123;</div><div class="line">      <span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">      <span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>学名是Global White Space Reset. 从原文中可以看出这个方法刚问世时是非常火爆的，并且作者建议一定要先破后立，要将清扫差异和重置默认样式结合起来，这样才是正确的做法。为何这个方法在问世之初风光一时，而后又被大家摒弃？其实它的长处和短处都过于明显，对于style的处理机制是管你谁是谁，上去一顿降龙十八掌，打完再说，先破再利，却不知这样做带来了麻烦无限(因为被抹平的样式，你得再重新设置回来，比如input的padding等),一个缺点和有点同样明显的东东，我们还是不用为妙。</p>
+<hr>
+<h5 id="二-下面是玉伯和正淳一起整理的一份-reset-css"><a href="#二-下面是玉伯和正淳一起整理的一份-reset-css" class="headerlink" title="二.下面是玉伯和正淳一起整理的一份 reset.css:"></a>二.下面是玉伯和正淳一起整理的一份 reset.css:</h5><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line">KISSY CSS Reset</div><div class="line">理念：清除和重置是紧密不可分的</div><div class="line">特色：1.适应中文 2.基于最新主流浏览器</div><div class="line">维护：玉伯(lifesinger@gmail.com), 正淳(ragecarrier@gmail.com)</div><div class="line">*/</div><div class="line"></div><div class="line"><span class="comment">/* 清除内外边距 */</span></div><div class="line"><span class="selector-tag">body</span>, <span class="selector-tag">h1</span>, <span class="selector-tag">h2</span>, <span class="selector-tag">h3</span>, <span class="selector-tag">h4</span>, <span class="selector-tag">h5</span>, <span class="selector-tag">h6</span>, hr, <span class="selector-tag">p</span>, <span class="selector-tag">blockquote</span>, <span class="comment">/* structural elements 结构元素 */</span></div><div class="line"><span class="selector-tag">dl</span>, <span class="selector-tag">dt</span>, <span class="selector-tag">dd</span>, <span class="selector-tag">ul</span>, <span class="selector-tag">ol</span>, <span class="selector-tag">li</span>, <span class="comment">/* list elements 列表元素 */</span></div><div class="line">pre, <span class="comment">/* text formatting elements 文本格式元素 */</span></div><div class="line"><span class="selector-tag">fieldset</span>, lengend, <span class="selector-tag">button</span>, <span class="selector-tag">input</span>, <span class="selector-tag">textarea</span>, <span class="comment">/* form elements 表单元素 */</span></div><div class="line"><span class="selector-tag">th</span>, <span class="selector-tag">td</span> &#123; <span class="comment">/* table elements 表格元素 */</span></div><div class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 设置默认字体 */</span></div><div class="line"><span class="selector-tag">body</span>,</div><div class="line"><span class="selector-tag">button</span>, <span class="selector-tag">input</span>, select, <span class="selector-tag">textarea</span> &#123; <span class="comment">/* for ie */</span></div><div class="line">    <span class="comment">/*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/</span></div><div class="line">    <span class="attribute">font</span>: <span class="number">12px</span>/<span class="number">1</span> Tahoma, Helvetica, Arial, <span class="string">"\5b8b\4f53"</span>, sans-serif; <span class="comment">/* 用 ascii 字符表示，使得在任何编码下都无问题 */</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">h1</span> &#123; <span class="attribute">font-size</span>: <span class="number">18px</span>; <span class="comment">/* 18px / 12px = 1.5 */</span> &#125;</div><div class="line"><span class="selector-tag">h2</span> &#123; <span class="attribute">font-size</span>: <span class="number">16px</span>; &#125;</div><div class="line"><span class="selector-tag">h3</span> &#123; <span class="attribute">font-size</span>: <span class="number">14px</span>; &#125;</div><div class="line"><span class="selector-tag">h4</span>, <span class="selector-tag">h5</span>, <span class="selector-tag">h6</span> &#123; <span class="attribute">font-size</span>: <span class="number">100%</span>; &#125;</div><div class="line"></div><div class="line"><span class="selector-tag">address</span>, <span class="selector-tag">cite</span>, <span class="selector-tag">dfn</span>, <span class="selector-tag">em</span>, <span class="selector-tag">var</span> &#123; <span class="attribute">font-style</span>: normal; &#125; <span class="comment">/* 将斜体扶正 */</span></div><div class="line"><span class="selector-tag">code</span>, <span class="selector-tag">kbd</span>, pre, <span class="selector-tag">samp</span>, tt &#123; <span class="attribute">font-family</span>: <span class="string">"Courier New"</span>, Courier, monospace; &#125; <span class="comment">/* 统一等宽字体 */</span></div><div class="line">small &#123; <span class="attribute">font-size</span>: <span class="number">12px</span>; &#125; <span class="comment">/* 小于 12px 的中文很难阅读，让 small 正常化 */</span></div><div class="line"></div><div class="line"><span class="comment">/* 重置列表元素 */</span></div><div class="line"><span class="selector-tag">ul</span>, <span class="selector-tag">ol</span> &#123; <span class="attribute">list-style</span>: none; &#125;</div><div class="line"></div><div class="line"><span class="comment">/* 重置文本格式元素 */</span></div><div class="line"><span class="selector-tag">a</span> &#123; <span class="attribute">text-decoration</span>: none; &#125;</div><div class="line"><span class="selector-tag">a</span>:hover &#123; <span class="attribute">text-decoration</span>: underline; &#125;</div><div class="line"></div><div class="line"><span class="selector-tag">abbr</span>[title], acronym[title] &#123; <span class="comment">/* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */</span></div><div class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> dotted;</div><div class="line">    <span class="attribute">cursor</span>: help;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">q</span>:before, <span class="selector-tag">q</span>:after &#123; <span class="attribute">content</span>: <span class="string">''</span>; &#125;</div><div class="line"></div><div class="line"><span class="comment">/* 重置表单元素 */</span></div><div class="line"><span class="selector-tag">legend</span> &#123; <span class="attribute">color</span>: <span class="number">#000</span>; &#125; <span class="comment">/* for ie6 */</span></div><div class="line"><span class="selector-tag">fieldset</span>, <span class="selector-tag">img</span> &#123; <span class="attribute">border</span>: none; &#125; <span class="comment">/* img 搭车：让链接里的 img 无边框 */</span></div><div class="line"><span class="comment">/* 注：optgroup 无法扶正 */</span></div><div class="line"><span class="selector-tag">button</span>, <span class="selector-tag">input</span>, select, <span class="selector-tag">textarea</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">100%</span>; <span class="comment">/* 使得表单元素在 ie 下能继承字体大小 */</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 重置表格元素 */</span></div><div class="line"><span class="selector-tag">table</span> &#123;</div><div class="line">    <span class="attribute">border-collapse</span>: collapse;</div><div class="line">    <span class="attribute">border-spacing</span>: <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 重置 hr */</span></div><div class="line">hr &#123;</div><div class="line">    <span class="attribute">border</span>: none;</div><div class="line">    <span class="attribute">height</span>: <span class="number">1px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */</span></div><div class="line"><span class="selector-tag">html</span> &#123; <span class="attribute">overflow-y</span>: scroll; &#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p> 解释一些和 YUI cssreset 的差异点：</p>
+<p>1 清除内外边距的元素，去掉了 div, code（在测试浏览器中，没发现有边距）, 增加了 button（感觉是 YUI 遗漏了）. </p>
+<p>2 去掉了 YUI 里对 html 颜色和背景色的设置。在测试浏览器中，没有发现差异。（要设的话，推荐background: transparent） </p>
+<p>3 对于 address, caption, …, em, strong 等文本格式元素，做了调整。保留了 strong 和 th 的粗体。</p>
+<p>4 对 abbr 和 acronym 做了调整，使得在非 ie6 下可视性更好。 </p>
+<p>5 去掉了 sup 和 sub 的样式，直接用浏览器默认的即可。 </p>
+<p>6 对于 input, select, textarea 表单元素，去掉了针对 ie 的 inherit, 只保留了 font-size 的 inherit hack. 因为其它 hack 经测试已失效。<br>7 增加了一些元素的默认样式。 </p>
+</blockquote>
+<p>请记住：永远不存在万能解决方案，永远没有银弹。</p>
+<p>因此我的建议和 Eric 是一样的：请根据具体需求，适量裁剪和修改后再使用。</p>
+<p>比如针对淘宝，可以在 reset.css 的基础上，修改为 reset-taobao.css.</p>
+<p>如果是个人博客，我个人喜欢的一个方案是：reset-blog.css.</p>
+<p>相关测试页面请查看：cssreset svn.<br>真实使用时，请用压缩后的版本：reset-min.css.</p>
+<p>对于 reset.css 本身，我们期待它能尽量多的适用于各种场景，但不期待它能解决所有问题。目前而言，reset.css 里的默认样式，是玉伯和正淳等各位同事和朋友们实践经验的总结，算是“精挑细选”，但不期待能解决所有问题。</p>
+<p>最后，期待你的参与和建议。如果这份 reset.css 能有幸在你的项目中得到使用，则非常期待你的反馈。</p>
+<h6 id="建议："><a href="#建议：" class="headerlink" title="建议："></a>建议：</h6><p>1.真是项目中可以这样：Reset css +fonts.css /base.css/layout.css…….相结合的方式</p>
+<p>2.在reset css中 没用到的元素可以直接拿掉，减少代码量</p>
+<p>3.在reset css中做好版本维护信息，方便扩展</p>
+<h6 id="最后建议："><a href="#最后建议：" class="headerlink" title="最后建议："></a>最后建议：</h6><p>网上所有的Reset css 都不是你自己的Reset css ，包括玉伯整理的这个，使用前请深思本文开头的话，量身打造，只选对的，不选”贵”的。</p>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":["mshare","tsina","weixin","tqq","bdhome","fbook","linkedin","copy"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"153.5"},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS3/" rel="tag">#CSS3</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/26/back/" rel="next" title="background自适应">
+                <i class="fa fa-chevron-left"></i> background自适应
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/27/reset/"
+           data-title="reset" data-url="http://roverk.com/2016/07/27/reset/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/head_icon.jpg"
+               alt="ROVER" />
+          <p class="site-author-name" itemprop="name">ROVER</p>
+          <p class="site-description motion-element" itemprop="description">做一个有追求的D</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#一-最简化的CSS-Reset-无敌小白版"><span class="nav-number">1.</span> <span class="nav-text">　　一.最简化的CSS Reset(无敌小白版) :</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二-下面是玉伯和正淳一起整理的一份-reset-css"><span class="nav-number">2.</span> <span class="nav-text">二.下面是玉伯和正淳一起整理的一份 reset.css:</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#建议："><span class="nav-number">2.1.</span> <span class="nav-text">建议：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#最后建议："><span class="nav-number">2.2.</span> <span class="nav-text">最后建议：</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ROVER</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">ROVER</a> 提供支持<(￣ˇ￣)/
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="/cross.html">
+    NexT.Mist
+  </a>
+</div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":["mshare","tsina","weixin","tqq","bdhome","fbook","linkedin","copy"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"153.5"},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  };
+  (function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"roverk"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("04UOIOSVxMIXry5PTLcNda02-gzGzoHsz", "nmOv88975Di5DDS9UXCu9Kob");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
