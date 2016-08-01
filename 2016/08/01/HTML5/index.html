@@ -1,0 +1,960 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="CSS3," />
+
+<meta name="title" content="GIT+HEXO 搭建的个人博客 交流,学习 Be better">
+
+<meta name="description" content="布拉德皮蛋,一个有追求的D! 前端路漫漫">
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+
+
+
+
+
+<meta name="description" content="HTML5的标签重新定义，其属性更加简单高效，本地存储、缓存技术更加完善，简单易用，最重要的是其游戏开发方面，canvas的绘制，加之以用于开发3D游戏，更加方便快捷，无需下载，打开浏览器就可以玩。对视频音频的支持也更加完美，是web的重大革新。另本文总结了HTML5带来的15项你必须知道的新特性（偏基础）。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5">
+<meta property="og:url" content="http://roverk.com/2016/08/01/HTML5/index.html">
+<meta property="og:site_name" content="布拉德皮蛋">
+<meta property="og:description" content="HTML5的标签重新定义，其属性更加简单高效，本地存储、缓存技术更加完善，简单易用，最重要的是其游戏开发方面，canvas的绘制，加之以用于开发3D游戏，更加方便快捷，无需下载，打开浏览器就可以玩。对视频音频的支持也更加完美，是web的重大革新。另本文总结了HTML5带来的15项你必须知道的新特性（偏基础）。">
+<meta property="og:updated_time" content="2016-08-01T14:37:32.789Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML5">
+<meta name="twitter:description" content="HTML5的标签重新定义，其属性更加简单高效，本地存储、缓存技术更加完善，简单易用，最重要的是其游戏开发方面，canvas的绘制，加之以用于开发3D游戏，更加方便快捷，无需下载，打开浏览器就可以玩。对视频音频的支持也更加完美，是web的重大革新。另本文总结了HTML5带来的15项你必须知道的新特性（偏基础）。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://roverk.com/2016/08/01/HTML5/"/>
+
+  <title> HTML5 | 布拉德皮蛋 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?f31e61a3d07d1e422325bde3a30f5e75";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">布拉德皮蛋</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">做一个有追求的D</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-demo">
+          <a href="/DEMO" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-rebel"></i> <br />
+            
+            DEMO合集
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                HTML5
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-01T22:26:59+08:00" content="2016-08-01">
+              2016-08-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/CSS3/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS3</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/01/HTML5/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/01/HTML5/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/08/01/HTML5/" class="leancloud_visitors" data-flag-title="HTML5">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>HTML5的标签重新定义，其属性更加简单高效，本地存储、缓存技术更加完善，简单易用，最重要的是其游戏开发方面，canvas的绘制，加之以用于开发3D游戏，更加方便快捷，无需下载，打开浏览器就可以玩。对视频音频的支持也更加完美，是web的重大革新。另本文总结了HTML5带来的15项你必须知道的新特性（偏基础）。</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>新的文档类型  (New Doctype)</p>
+<p>目前许多网页还在使用XHTML 1.0 并且要在第一行像这样声明文档类型：</p>
+<blockquote>
+<p>&lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”<br>“<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;" target="_blank" rel="external">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</a></p>
+<p>在HTML5中，上面那种声明方式将失效。下面是HTML5中的声明方式：</p>
+<p>&lt;!DOCTYPE html&gt;</p>
+</blockquote>
+<hr>
+<p>脚本和链接无需type  (No More Types for Scripts and Links)</p>
+<p>在HTML4或XHTML中，你需要用下面的几行代码来给你的网页添加CSS和JavaScript文件。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"css/stylesheet.css"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"js/script.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>而在HTML5中，你不再需要指定类型属性。因此，代码可以简化如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"css/stylesheet.css"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/script.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<hr>
+<p>语义Header和Footer (The Semantic Header and Footer)</p>
+<p>在HTML4或XHTML中，你需要用下面的代码来声明”Header”和”Footer”.</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">div</span> <span class="built_in">id</span>=<span class="string">"header"</span>&gt;</div><div class="line"></div><div class="line">... </div><div class="line">&lt;/<span class="keyword">div</span>&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;<span class="keyword">div</span> <span class="built_in">id</span>=<span class="string">"footer"</span>&gt;</div><div class="line"></div><div class="line">... </div><div class="line">&lt;/<span class="keyword">div</span>&gt;</div></pre></td></tr></table></figure>
+<p>在HTML5中，有两个可以替代上述声明的元素，这可以使代码更简洁。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span></div><div class="line"></div><div class="line">... </div><div class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span></div><div class="line"></div><div class="line">... </div><div class="line"><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></div></pre></td></tr></table></figure>
+<hr>
+<p>Hgroup</p>
+<p>在HTML5中，有许多新引入的元素，hgroup就是其中之一。假设我的网站名下面紧跟着一个子标题，我可以用</p><h1>和<h2>标签来分别定义。然而，这种定义没有说明这两者之间的关系。而且，h2标签的使用会带来更多问题，比如该页面上还有其他标题的时候。<p></p>
+<p>在HTML5中，我们可以用hgroup元素来将它们分组，这样就不会影响文件的大纲。</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="section">&lt;header&gt;</span></div><div class="line"><span class="section">&lt;hgroup&gt;</span> </div><div class="line"><span class="section">&lt;h1&gt;</span></div><div class="line"><span class="attribute">Recall</span> Fan Page </div><div class="line"><span class="section">&lt;/h1&gt;</span> </div><div class="line"><span class="section">&lt;h2&gt;</span></div><div class="line"><span class="attribute">Only</span> for people who want the memory of a lifetime. </div><div class="line"><span class="section">&lt;/h2&gt;</span></div><div class="line"><span class="section">&lt;/hgroup&gt;</span></div><div class="line"><span class="section">&lt;/header&gt;</span></div></pre></td></tr></table></figure>
+<hr>
+<p>标记元素 (Mark Element)</p>
+<p>你可以把它当做高亮标签。被这个标签修饰的字符串应当和用户当前的行动相关。比如说，当我在某博客中搜索“Open your Mind”时，我可以利用一些JavaScript将出现的词组用<mark>修饰一下。</mark></p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="params">&lt;h3&gt;</span></div><div class="line">Search Results </div><div class="line"><span class="params">&lt;/h3&gt;</span></div><div class="line"></div><div class="line"><span class="params">&lt;p&gt;</span></div><div class="line">They were interrupted, just after Quato said, </div><div class="line"><span class="params">&lt;mark&gt;</span></div><div class="line"><span class="string">"Open your Mind"</span></div><div class="line"><span class="params">&lt;/mark&gt;</span></div><div class="line">. </div><div class="line"><span class="params">&lt;/p&gt;</span></div></pre></td></tr></table></figure>
+<hr>
+<p>图形元素 (Figure Element)</p>
+<p>在HTML4或XHTML中，下面的这些代码被用来修饰图片的注释。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/image"</span> <span class="attr">alt</span>=<span class="string">"About image"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">Image of Mars. </div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>然而，上述代码没有将文字和图片内在联系起来。因此，HTML5引入了<figure>元素。当和<figcaption>结合起来后，我们可以语义化地将注释和相应的图片联系起来。</figcaption></figure></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">figure</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"path/to/image"</span> <span class="attr">alt</span>=<span class="string">"About image"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">figcaption</span>&gt;</span>  </div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">This is an image of something interesting. </div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">figcaption</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">figure</span>&gt;</span></div></pre></td></tr></table></figure>
+<hr>
+<p>重新定义<small> (Small Element redefined)</small></p>
+<p>在HTML4或XHTML中，<small>元素已经存在。然而，却没有如何正确使用这一元素的完整说明。在HTML5中，<small>被用来定义小字。试想下你网站底部的版权状态，根据对此元素新的HTML5定义，<small>可以正确地诠释这些信息。 </small></small></small></p>
+<hr>
+<p>占位符 (Placeholder)</p>
+<p>在HTML4或XHTML中，你需要用JavaScript来给文本框添加占位符。比如，你可以提前设置好一些信息，当用户开始输入时，文本框中的文字就消失。<br>而在HTML5中，新的“placeholder”就简化了这个问题。</p>
+<hr>
+<p>必要属性 (Required Attribute)</p>
+<p>HTML5中的新属性“required”指定了某一输入是否必需。有两种方法声明这一属性。</p>
+<figure class="highlight fsharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;input <span class="class"><span class="keyword">type</span></span>=<span class="string">"text"</span> name=<span class="string">"someInput"</span> required&gt;</div><div class="line"></div><div class="line">&lt;input <span class="class"><span class="keyword">type</span></span>=<span class="string">"text"</span> name=<span class="string">"someInput"</span> required=<span class="string">"required"</span>&gt;</div></pre></td></tr></table></figure>
+<p>当文本框被指定必需时，如果空白的话表格就不能提交。下面是一个如何使用的例子。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">form</span> method=<span class="string">"post"</span> action=<span class="string">""</span>&gt;</div><div class="line">&lt;<span class="selector-tag">label</span> <span class="keyword">for</span>=<span class="string">"someInput"</span>&gt;</div><div class="line">Your Name: </div><div class="line">&lt;/label&gt;</div><div class="line">&lt;<span class="selector-tag">input</span> type=<span class="string">"text"</span> id=<span class="string">"someInput"</span> name=<span class="string">"someInput"</span> placeholder=<span class="string">"Douglas Quaid"</span> required&gt;</div><div class="line">&lt;<span class="selector-tag">button</span> type=<span class="string">"submit"</span>&gt;</div><div class="line">Go</div><div class="line">&lt;/button&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
+<p>在上面那个例子中，如果输入内容空且表格被提交，输入框将被高亮显示。</p>
+<hr>
+<p>Autofocus 属性 (Autofocus Attribute)</p>
+<p>同样，HTML5的解决方案消除了对JavaScript的需要。如果一个特定的输入应该是“选择”或聚焦，默认情况下，我们现在可以利用自动聚焦属性。 </p>
+<figure class="highlight fsharp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input <span class="class"><span class="keyword">type</span></span>=<span class="string">"text"</span> name=<span class="string">"someInput"</span> placeholder=<span class="string">"Douglas Quaid"</span> required autofocus&gt;</div></pre></td></tr></table></figure>
+<hr>
+<p>Audio 支持 (Audio Support)</p>
+<p>目前我们需要依靠第三方插件来渲染音频。然而在HTML5中，<audio>元素被引进来了。</audio></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">autoplay</span>=<span class="string">"autoplay"</span> <span class="attr">controls</span>=<span class="string">"controls"</span>&gt;</span>     </div><div class="line"><span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"file.ogg"</span> /&gt;</span>     </div><div class="line"><span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"file.mp3"</span> /&gt;</span>     </div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"file.mp3"</span>&gt;</span></div><div class="line">Download this file.</div><div class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>当使用<audio>元素时请记得包含两种音频格式。FireFox想要.ogg格式的文件，而Webkit浏览器则需要.mp3格式的。和往常一样，IE是不支持的，且Opera 10及以下版本只支持.wav格式。</audio></p>
+<hr>
+<p>Video 支持 (Video Support)</p>
+<p>HTML5中不仅有<audio>元素，而且还有<video>。然而，和<audio>类似，HTML5中并没有指定视频解码器，它留给了浏览器来决定。虽然Safari和Internet Explorer9可以支持H.264格式的视频，Firefox和Opera是坚持开源Theora 和Vorbis格式。因此，指定HTML5的视频时，你必须提供这两种格式。 </audio></video></audio></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">controls</span> <span class="attr">preload</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"cohagenPhoneCall.ogv"</span> <span class="attr">type</span>=<span class="string">"video/ogg; codecs='vorbis, theora'"</span> /&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"cohagenPhoneCall.mp4"</span> <span class="attr">type</span>=<span class="string">"video/mp4; 'codecs='avc1.42E01E, mp4a.40.2'"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">Your browser is old. </div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"cohagenPhoneCall.mp4"</span>&gt;</span></div><div class="line">Download this video instead.</div><div class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></div></pre></td></tr></table></figure>
+<hr>
+<p>视频预载 (Preload attribute in Videos element)</p>
+<p>当用户访问页面时这一属性使得视频得以预载。为了实现这个功能，可以在<video>元素中加上preload=”preload”或者只是preload。</video></p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">video</span> preload&gt;</div></pre></td></tr></table></figure>
+<hr>
+<p>显示控制条 (Display Controls)</p>
+<p>如果你使用过上面的每一个提到的技术点，你可能已经注意到，使用上面的代码，视频仅仅显示的是张图片，没有控制条。为了渲染出播放控制条，我们必须在video元素内指定controls属性。 </p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">video</span> preload controls&gt;</div></pre></td></tr></table></figure>
+<hr>
+<p>正规表达式 (Regular Expressions)</p>
+<p>在HTML4或XHTML中，你需要用一些正规表达式来验证特定的文本。而HTML5中新的pattern属性让我们能够在标签处直接插入一个正规表达式。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">form</span> action=<span class="string">""</span> method=<span class="string">"post"</span>&gt;</div><div class="line">&lt;<span class="selector-tag">label</span> <span class="keyword">for</span>=<span class="string">"username"</span>&gt;</div><div class="line">Create <span class="selector-tag">a</span> Username: </div><div class="line">&lt;/label&gt;    </div><div class="line">&lt;<span class="selector-tag">input</span> type=<span class="string">"text"</span> name=<span class="string">"username"</span> id=<span class="string">"username"</span> </div><div class="line">    placeholder=<span class="string">"4 &lt;&gt; 10"</span> </div><div class="line">    pattern=<span class="string">"[A-Za-z]&#123;4,10&#125;"</span> </div><div class="line">    autofocus </div><div class="line">    required&gt;</div><div class="line"></div><div class="line">&lt;<span class="selector-tag">button</span> type=<span class="string">"submit"</span>&gt;</div><div class="line">Go </div><div class="line">&lt;/button&gt;</div><div class="line"></div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
+</h2></h1>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS3/" rel="tag">#CSS3</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/27/reset/" rel="next" title="reset.css">
+                <i class="fa fa-chevron-left"></i> reset.css
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/08/01/HTML5/"
+           data-title="HTML5" data-url="http://roverk.com/2016/08/01/HTML5/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/head_icon.jpg"
+               alt="ROVER" />
+          <p class="site-author-name" itemprop="name">ROVER</p>
+          <p class="site-description motion-element" itemprop="description">做一个有追求的D</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number"></span> <span class="nav-text">和标签来分别定义。然而，这种定义没有说明这两者之间的关系。而且，h2标签的使用会带来更多问题，比如该页面上还有其他标题的时候。
+在HTML5中，我们可以用hgroup元素来将它们分组，这样就不会影响文件的大纲。
+12345678910<header><hgroup> <h1>Recall Fan Page </h1> <h2>Only for people who want the memory of a lifetime. </h2></hgroup></header>
+
+标记元素 (Mark Element)
+你可以把它当做高亮标签。被这个标签修饰的字符串应当和用户当前的行动相关。比如说，当我在某博客中搜索“Open your Mind”时，我可以利用一些JavaScript将出现的词组用修饰一下。
+1234567891011<h3>Search Results </h3><p>They were interrupted, just after Quato said, <mark>"Open your Mind"</mark>. </p>
+
+图形元素 (Figure Element)
+在HTML4或XHTML中，下面的这些代码被用来修饰图片的注释。
+12345<img src="images/image" alt="About image" /><p>Image of Mars. </p>
+然而，上述代码没有将文字和图片内在联系起来。因此，HTML5引入了元素。当和结合起来后，我们可以语义化地将注释和相应的图片联系起来。
+12345678<figure><img src="path/to/image" alt="About image" /><figcaption>  <p>This is an image of something interesting. </p></figcaption></figure>
+
+重新定义 (Small Element redefined)
+在HTML4或XHTML中，元素已经存在。然而，却没有如何正确使用这一元素的完整说明。在HTML5中，被用来定义小字。试想下你网站底部的版权状态，根据对此元素新的HTML5定义，可以正确地诠释这些信息。 
+
+占位符 (Placeholder)
+在HTML4或XHTML中，你需要用JavaScript来给文本框添加占位符。比如，你可以提前设置好一些信息，当用户开始输入时，文本框中的文字就消失。而在HTML5中，新的“placeholder”就简化了这个问题。
+
+必要属性 (Required Attribute)
+HTML5中的新属性“required”指定了某一输入是否必需。有两种方法声明这一属性。
+123<input type="text" name="someInput" required><input type="text" name="someInput" required="required">
+当文本框被指定必需时，如果空白的话表格就不能提交。下面是一个如何使用的例子。
+123456789<form method="post" action=""><label for="someInput">Your Name: </label><input type="text" id="someInput" name="someInput" placeholder="Douglas Quaid" required><button type="submit">Go</button></form>
+在上面那个例子中，如果输入内容空且表格被提交，输入框将被高亮显示。
+
+Autofocus 属性 (Autofocus Attribute)
+同样，HTML5的解决方案消除了对JavaScript的需要。如果一个特定的输入应该是“选择”或聚焦，默认情况下，我们现在可以利用自动聚焦属性。 
+1<input type="text" name="someInput" placeholder="Douglas Quaid" required autofocus>
+
+Audio 支持 (Audio Support)
+目前我们需要依靠第三方插件来渲染音频。然而在HTML5中，元素被引进来了。
+1234567<audio autoplay="autoplay" controls="controls">     <source src="file.ogg" />     <source src="file.mp3" />     <a href="file.mp3">Download this file.</a></audio>
+当使用元素时请记得包含两种音频格式。FireFox想要.ogg格式的文件，而Webkit浏览器则需要.mp3格式的。和往常一样，IE是不支持的，且Opera 10及以下版本只支持.wav格式。
+
+Video 支持 (Video Support)
+HTML5中不仅有元素，而且还有。然而，和类似，HTML5中并没有指定视频解码器，它留给了浏览器来决定。虽然Safari和Internet Explorer9可以支持H.264格式的视频，Firefox和Opera是坚持开源Theora 和Vorbis格式。因此，指定HTML5的视频时，你必须提供这两种格式。 
+12345678910111213<video controls preload><source src="cohagenPhoneCall.ogv" type="video/ogg; codecs='vorbis, theora'" /><source src="cohagenPhoneCall.mp4" type="video/mp4; 'codecs='avc1.42E01E, mp4a.40.2'" /><p>Your browser is old. <a href="cohagenPhoneCall.mp4">Download this video instead.</a></p></video>
+
+视频预载 (Preload attribute in Videos element)
+当用户访问页面时这一属性使得视频得以预载。为了实现这个功能，可以在元素中加上preload=”preload”或者只是preload。
+1<video preload>
+
+显示控制条 (Display Controls)
+如果你使用过上面的每一个提到的技术点，你可能已经注意到，使用上面的代码，视频仅仅显示的是张图片，没有控制条。为了渲染出播放控制条，我们必须在video元素内指定controls属性。 
+1<video preload controls>
+
+正规表达式 (Regular Expressions)
+在HTML4或XHTML中，你需要用一些正规表达式来验证特定的文本。而HTML5中新的pattern属性让我们能够在标签处直接插入一个正规表达式。
+123456789101112131415<form action="" method="post"><label for="username">Create a Username: </label>    <input type="text" name="username" id="username"     placeholder="4 <> 10"     pattern="[A-Za-z]{4,10}"     autofocus     required><button type="submit">Go </button></form>
+</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">标签来分别定义。然而，这种定义没有说明这两者之间的关系。而且，h2标签的使用会带来更多问题，比如该页面上还有其他标题的时候。
+在HTML5中，我们可以用hgroup元素来将它们分组，这样就不会影响文件的大纲。
+12345678910<header><hgroup> <h1>Recall Fan Page </h1> <h2>Only for people who want the memory of a lifetime. </h2></hgroup></header>
+
+标记元素 (Mark Element)
+你可以把它当做高亮标签。被这个标签修饰的字符串应当和用户当前的行动相关。比如说，当我在某博客中搜索“Open your Mind”时，我可以利用一些JavaScript将出现的词组用修饰一下。
+1234567891011<h3>Search Results </h3><p>They were interrupted, just after Quato said, <mark>"Open your Mind"</mark>. </p>
+
+图形元素 (Figure Element)
+在HTML4或XHTML中，下面的这些代码被用来修饰图片的注释。
+12345<img src="images/image" alt="About image" /><p>Image of Mars. </p>
+然而，上述代码没有将文字和图片内在联系起来。因此，HTML5引入了元素。当和结合起来后，我们可以语义化地将注释和相应的图片联系起来。
+12345678<figure><img src="path/to/image" alt="About image" /><figcaption>  <p>This is an image of something interesting. </p></figcaption></figure>
+
+重新定义 (Small Element redefined)
+在HTML4或XHTML中，元素已经存在。然而，却没有如何正确使用这一元素的完整说明。在HTML5中，被用来定义小字。试想下你网站底部的版权状态，根据对此元素新的HTML5定义，可以正确地诠释这些信息。 
+
+占位符 (Placeholder)
+在HTML4或XHTML中，你需要用JavaScript来给文本框添加占位符。比如，你可以提前设置好一些信息，当用户开始输入时，文本框中的文字就消失。而在HTML5中，新的“placeholder”就简化了这个问题。
+
+必要属性 (Required Attribute)
+HTML5中的新属性“required”指定了某一输入是否必需。有两种方法声明这一属性。
+123<input type="text" name="someInput" required><input type="text" name="someInput" required="required">
+当文本框被指定必需时，如果空白的话表格就不能提交。下面是一个如何使用的例子。
+123456789<form method="post" action=""><label for="someInput">Your Name: </label><input type="text" id="someInput" name="someInput" placeholder="Douglas Quaid" required><button type="submit">Go</button></form>
+在上面那个例子中，如果输入内容空且表格被提交，输入框将被高亮显示。
+
+Autofocus 属性 (Autofocus Attribute)
+同样，HTML5的解决方案消除了对JavaScript的需要。如果一个特定的输入应该是“选择”或聚焦，默认情况下，我们现在可以利用自动聚焦属性。 
+1<input type="text" name="someInput" placeholder="Douglas Quaid" required autofocus>
+
+Audio 支持 (Audio Support)
+目前我们需要依靠第三方插件来渲染音频。然而在HTML5中，元素被引进来了。
+1234567<audio autoplay="autoplay" controls="controls">     <source src="file.ogg" />     <source src="file.mp3" />     <a href="file.mp3">Download this file.</a></audio>
+当使用元素时请记得包含两种音频格式。FireFox想要.ogg格式的文件，而Webkit浏览器则需要.mp3格式的。和往常一样，IE是不支持的，且Opera 10及以下版本只支持.wav格式。
+
+Video 支持 (Video Support)
+HTML5中不仅有元素，而且还有。然而，和类似，HTML5中并没有指定视频解码器，它留给了浏览器来决定。虽然Safari和Internet Explorer9可以支持H.264格式的视频，Firefox和Opera是坚持开源Theora 和Vorbis格式。因此，指定HTML5的视频时，你必须提供这两种格式。 
+12345678910111213<video controls preload><source src="cohagenPhoneCall.ogv" type="video/ogg; codecs='vorbis, theora'" /><source src="cohagenPhoneCall.mp4" type="video/mp4; 'codecs='avc1.42E01E, mp4a.40.2'" /><p>Your browser is old. <a href="cohagenPhoneCall.mp4">Download this video instead.</a></p></video>
+
+视频预载 (Preload attribute in Videos element)
+当用户访问页面时这一属性使得视频得以预载。为了实现这个功能，可以在元素中加上preload=”preload”或者只是preload。
+1<video preload>
+
+显示控制条 (Display Controls)
+如果你使用过上面的每一个提到的技术点，你可能已经注意到，使用上面的代码，视频仅仅显示的是张图片，没有控制条。为了渲染出播放控制条，我们必须在video元素内指定controls属性。 
+1<video preload controls>
+
+正规表达式 (Regular Expressions)
+在HTML4或XHTML中，你需要用一些正规表达式来验证特定的文本。而HTML5中新的pattern属性让我们能够在标签处直接插入一个正规表达式。
+123456789101112131415<form action="" method="post"><label for="username">Create a Username: </label>    <input type="text" name="username" id="username"     placeholder="4 <> 10"     pattern="[A-Za-z]{4,10}"     autofocus     required><button type="submit">Go </button></form>
+</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ROVER</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">ROVER</a> 提供支持<(￣ˇ￣)/
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="/cross.html">
+    NexT.Mist
+  </a>
+</div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":["mshare","tsina","weixin","tqq","bdhome","fbook","linkedin","copy"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"153.5"},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  };
+  (function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"roverk"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("04UOIOSVxMIXry5PTLcNda02-gzGzoHsz", "nmOv88975Di5DDS9UXCu9Kob");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
