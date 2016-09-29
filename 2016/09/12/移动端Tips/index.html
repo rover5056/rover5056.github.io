@@ -1,0 +1,915 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="js," />
+
+<meta name="title" content="GIT+HEXO 搭建的个人博客 交流,学习 Be better">
+
+<meta name="description" content="布拉德皮蛋,一个有追求的D! 前端路漫漫">
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+
+
+
+
+
+<meta name="description" content="META相关
+
+添加到主屏后的标题（IOS）
+ 
+
+启用 WebApp 全屏模式（IOS）当网站添加到主屏幕后再点击进行启动时，可隐藏地址栏（从浏览器跳转或输入链接进入并没有此效果） 
+ 
+
+百度禁止转码通过百度手机打开网页时，百度可能会对你的网页进行转码，往你页面贴上它的广告，非常之恶心。不过我们可以通过这个meta标签来禁止它：百度SiteApp转码声明
+
+设置状态栏的背景颜色（IOS）设置状">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动端开发TIPS">
+<meta property="og:url" content="http://roverk.com/2016/09/12/移动端Tips/index.html">
+<meta property="og:site_name" content="布拉德皮蛋">
+<meta property="og:description" content="META相关
+
+添加到主屏后的标题（IOS）
+ 
+
+启用 WebApp 全屏模式（IOS）当网站添加到主屏幕后再点击进行启动时，可隐藏地址栏（从浏览器跳转或输入链接进入并没有此效果） 
+ 
+
+百度禁止转码通过百度手机打开网页时，百度可能会对你的网页进行转码，往你页面贴上它的广告，非常之恶心。不过我们可以通过这个meta标签来禁止它：百度SiteApp转码声明
+
+设置状态栏的背景颜色（IOS）设置状">
+<meta property="og:updated_time" content="2016-09-29T15:45:51.383Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="移动端开发TIPS">
+<meta name="twitter:description" content="META相关
+
+添加到主屏后的标题（IOS）
+ 
+
+启用 WebApp 全屏模式（IOS）当网站添加到主屏幕后再点击进行启动时，可隐藏地址栏（从浏览器跳转或输入链接进入并没有此效果） 
+ 
+
+百度禁止转码通过百度手机打开网页时，百度可能会对你的网页进行转码，往你页面贴上它的广告，非常之恶心。不过我们可以通过这个meta标签来禁止它：百度SiteApp转码声明
+
+设置状态栏的背景颜色（IOS）设置状">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://roverk.com/2016/09/12/移动端Tips/"/>
+
+  <title> 移动端开发TIPS | 布拉德皮蛋 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?f31e61a3d07d1e422325bde3a30f5e75";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">布拉德皮蛋</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">做一个有追求的D</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-demo">
+          <a href="/DEMO" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-rebel"></i> <br />
+            
+            DEMO合集
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                移动端开发TIPS
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-12T22:03:47+08:00" content="2016-09-12">
+              2016-09-12
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/12/移动端Tips/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/12/移动端Tips/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/12/移动端Tips/" class="leancloud_visitors" data-flag-title="移动端开发TIPS">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>META相关</p>
+<ol>
+<li><p>添加到主屏后的标题（IOS）</p>
+<meta name="apple-mobile-web-app-title" content="标题"> 
+</li>
+<li><p>启用 WebApp 全屏模式（IOS）<br>当网站添加到主屏幕后再点击进行启动时，可隐藏地址栏（从浏览器跳转或输入链接进入并没有此效果）<br><meta name="apple-mobile-web-app-capable" content="yes"> </p>
+<meta name="apple-touch-fullscreen" content="yes"> 
+</li>
+<li><p>百度禁止转码<br>通过百度手机打开网页时，百度可能会对你的网页进行转码，往你页面贴上它的广告，非常之恶心。不过我们可以通过这个meta标签来禁止它：<br><meta http-equiv="Cache-Control" content="no-siteapp"><br>百度SiteApp转码声明</p>
+</li>
+<li><p>设置状态栏的背景颜色（IOS）<br>设置状态栏的背景颜色，只有在 “apple-mobile-web-app-capable” content=”yes” 时生效<br><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><br>content 参数：<br>default ：状态栏背景是白色。<br>black ：状态栏背景是黑色。<br>black-translucent ：状态栏背景是半透明。 如果设置为 default 或 black ,网页内容从状态栏底部开始。 如果设置为 black-translucent ,网页内容充满整个屏幕，顶部会被状态栏遮挡。</p>
+</li>
+<li><p>移动端手机号码识别（IOS）<br>在 iOS Safari （其他浏览器和Android均不会）上会对那些看起来像是电话号码的数字处理为电话链接，比如：<br>7位数字，形如：1234567<br>带括号及加号的数字，形如：(+86)123456789<br>双连接线的数字，形如：00-00-00111<br>11位数字，形如：13800138000<br>可能还有其他类型的数字也会被识别。我们可以通过如下的meta来关闭电话号码的自动识别：<br><meta name="format-detection" content="telephone=no"><br>开启电话功能<br><a href="tel:123456" target="_blank" rel="external">123456</a><br>开启短信功能：<br><a href="sms:123456" target="_blank" rel="external">123456</a> </p>
+</li>
+<li><p>移动端邮箱识别（Android）<br>与电话号码的识别一样，在安卓上会对符合邮箱格式的字符串进行识别，我们可以通过如下的meta来管别邮箱的自动识别：<br><meta content="email=no" name="format-detection"><br>同样地，我们也可以通过标签属性来开启长按邮箱地址弹出邮件发送的功能：<br>&lt;a mailto:dooyoe@gmail.com”&gt;dooyoe@gmail.com </p>
+</li>
+<li><p>添加智能 App 广告条 Smart App Banner（IOS 6+ Safari）</p>
+<meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
+</li>
+<li><p>IOS Web app启动动画<br>由于iPad 的启动画面是不包括状态栏区域的。所以启动图片需要减去状态栏区域所对应的方向上的20px大小，相应地在retina设备上要减去40px的大小</p>
+<!-- iPhone -->
+<p><link href="apple-touch-startup-image-320x460.png" media="(device-width: 320px)" rel="apple-touch-startup-image"></p>
+<!-- iPhone (Retina) -->
+<p><link href="apple-touch-startup-image-640x960.png" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"></p>
+<!-- iPad (portrait) -->
+<p><link href="apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (orientation: portrait)" rel="apple-touch-startup-image"></p>
+<!-- iPad (landscape) -->
+<p><link href="apple-touch-startup-image-748x1024.png" media="(device-width: 768px) and (orientation: landscape)" rel="apple-touch-startup-image"></p>
+<!-- iPad (Retina, portrait) -->
+<p><link href="apple-touch-startup-image-1536x2008.png" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"></p>
+<!-- iPad (Retina, landscape) -->
+<p><link href="apple-touch-startup-image-2048x1496.png" media="(device-width: 1536px)  and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"><br>（landscape：横屏 | portrait：竖屏）</p>
+</li>
+<li><p>添加到主屏后的APP图标<br>指定web app添加到主屏后的图标路径，有两种略微不同的方式：</p>
+<!-- 设计原图 -->
+<p><link href="short_cut_114x114.png" rel="apple-touch-icon-precomposed"></p>
+<!-- 添加高光效果 -->
+<p><link href="short_cut_114x114.png" rel="apple-touch-icon"><br>apple-touch-icon：在IOS6及以下的版本会自动为图标添加一层高光效果（IOS7开始已使用扁平化的设计风格）<br>apple-touch-icon-precomposed：使用“设计原图图标”<br>效果：</p>
+</li>
+</ol>
+<p>图标尺寸：<br>可通过指定size属性来为不同的设备提供不同的图标（但通常来说，我们只需提供一个114 x 114 pixels大小的图标即可 ）<br>官方说明如下<br>Create different sizes of your app icon for different devices. If you’re creating a universal app, you need to supply app icons in all four sizes.</p>
+<p>For iPhone and iPod touch both of these sizes are required:</p>
+<p>57 x 57 pixels</p>
+<p>114 x 114 pixels (high resolution)</p>
+<p>For iPad, both of these sizes are required:</p>
+<p>72 x 72 pixels</p>
+<p>144 x 144 (high resolution)</p>
+<ol>
+<li>优先使用最新版本 IE 和 Chrome<br><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><br>11.viewport模板<br>&lt;!DOCTYPE html&gt;<html><br><head><br><meta charset="utf-8"><br><meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"><br><meta content="yes" name="apple-mobile-web-app-capable"><br><meta content="black" name="apple-mobile-web-app-status-bar-style"><br><meta content="telephone=no" name="format-detection"><br><meta content="email=no" name="format-detection"><br><title>标题</title><br><link rel="stylesheet" href="index.css"><br></head><br><body><br>这里开始内容<br></body><br></html>
+
+</li>
+</ol>
+<p>常见问题</p>
+<p>1、移动端如何定义字体font-family<br>三大手机系统的字体：<br>ios 系统<br>默认中文字体是Heiti SC<br>默认英文字体是Helvetica<br>默认数字字体是HelveticaNeue<br>无微软雅黑字体<br>android 系统<br>默认中文字体是Droidsansfallback<br>默认英文和数字字体是Droid Sans<br>无微软雅黑字体<br>winphone 系统<br>默认中文字体是Dengxian(方正等线体)<br>默认英文和数字字体是Segoe<br>无微软雅黑字体<br>各个手机系统有自己的默认字体，且都不支持微软雅黑<br>如无特殊需求，手机端无需定义中文字体，使用系统默认<br>英文字体和数字字体可使用 Helvetica ，三种系统都支持</p>
+<ul>
+<li>移动端定义字体的代码 */<br>body{font-family:Helvetica;}</li>
+</ul>
+<p>2、移动端字体单位font-size选择px还是rem<br>对于只需要适配手机设备，使用px即可<br>对于需要适配各种移动设备，使用rem，例如只需要适配iPhone和iPad等分辨率差别比较挺大的设备<br>rem配置参考：<br>html {font-size:10px}<br>@media screen and (min-width:480px) and (max-width:639px) {<br>    html {<br>        font-size: 15px<br>    }<br>}<br>@media screen and (min-width:640px) and (max-width:719px) {<br>    html {<br>        font-size: 20px<br>    }<br>}<br>@media screen and (min-width:720px) and (max-width:749px) {<br>    html {<br>        font-size: 22.5px<br>    }<br>}<br>@media screen and (min-width:750px) and (max-width:799px) {<br>    html {<br>        font-size: 23.5px<br>    }<br>}<br>@media screen and (min-width:800px) and (max-width:959px) {<br>    html {<br>        font-size: 25px<br>    }<br>}<br>@media screen and (min-width:960px) and (max-width:1079px) {<br>    html {<br>        font-size: 30px<br>    }<br>}<br>@media screen and (min-width:1080px) {<br>    html {<br>        font-size: 32px<br>    }<br>}</p>
+<p>3、移动端touch事件(区分webkit 和 winphone)<br>当用户手指放在移动设备在屏幕上滑动会触发的touch事件<br>以下支持webkit<br>touchstart——当手指触碰屏幕时候发生。不管当前有多少只手指<br>touchmove——当手指在屏幕上滑动时连续触发。通常我们再滑屏页面，会调用event的preventDefault()可以阻止默认情况的发生：阻止页面滚动<br>touchend——当手指离开屏幕时触发<br>touchcancel——系统停止跟踪触摸时候会触发。例如在触摸过程中突然页面alert()一个提示框，此时会触发该事件，这个事件比较少用<br>以下支持winphone 8<br>MSPointerDown——当手指触碰屏幕时候发生。不管当前有多少只手指<br>MSPointerMove——当手指在屏幕上滑动时连续触发。通常我们再滑屏页面，会调用css的html{-ms-touch-action: none;}可以阻止默认情况的发生：阻止页面滚动<br>MSPointerUp——当手指离开屏幕时触发</p>
+<p>4、移动端click屏幕产生200-300 ms的延迟响应<br>移动设备上的web网页是有300ms延迟的，玩玩会造成按钮点击延迟甚至是点击失效。<br>以下是历史原因：<br>2007年苹果发布首款iphone上IOS系统搭载的safari为了将适用于PC端上大屏幕的网页能比较好的展示在手机端上，使用了双击缩放(double tap to zoom)的方案，比如你在手机上用浏览器打开一个PC上的网页，你可能在看到页面内容虽然可以撑满整个屏幕，但是字体、图片都很小看不清，此时可以快速双击屏幕上的某一部分，你就能看清该部分放大后的内容，再次双击后能回到原始状态。<br>双击缩放是指用手指在屏幕上快速点击两次，iOS 自带的 Safari 浏览器会将网页缩放至原始比例。<br>原因就出在浏览器需要如何判断快速点击上，当用户在屏幕上单击某一个元素时候，例如跳转链接<a href="#"></a>，此处浏览器会先捕获该次单击，但浏览器不能决定用户是单纯要点击链接还是要双击该部分区域进行缩放操作，所以，捕获第一次单击后，浏览器会先Hold一段时间t，如果在t时间区间里用户未进行下一次点击，则浏览器会做单击跳转链接的处理，如果t时间里用户进行了第二次单击操作，则浏览器会禁止跳转，转而进行对该部分区域页面的缩放操作。那么这个时间区间t有多少呢？在IOS safari下，大概为300毫秒。这就是延迟的由来。造成的后果用户纯粹单击页面，页面需要过一段时间才响应，给用户慢体验感觉，对于web开发者来说是，页面js捕获click事件的回调函数处理，需要300ms后才生效，也就间接导致影响其他业务逻辑的处理。<br>解决方案：<br>fastclick可以解决在手机上点击事件的300ms延迟<br>zepto的touch模块，tap事件也是为了解决在click的延迟问题<br>触摸事件的响应顺序<br>1、ontouchstart<br>2、ontouchmove<br>3、ontouchend<br>4、onclick<br>解决300ms延迟的问题，也可以通过绑定ontouchstart事件，加快对事件的响应</p>
+<p>5、什么是Retina 显示屏，带来了什么问题<br>retina：一种具备超高像素密度的液晶屏，同样大小的屏幕上显示的像素点由1个变为多个，如在同样带下的屏幕上，苹果设备的retina显示屏中，像素点1个变为4个<br>在高清显示屏中的位图被放大，图片会变得模糊，因此移动端的视觉稿通常会设计为传统PC的2倍<br>那么，前端的应对方案是：<br>设计稿切出来的图片长宽保证为偶数，并使用backgroud-size把图片缩小为原来的1/2<br>//例如图片宽高为：200px*200px，那么写法如下<br>.css{width:100px;height:100px;background-size:100px 100px;}<br>其它元素的取值为原来的1/2，例如视觉稿40px的字体，使用样式的写法为20px<br>.css{font-size:20px}</p>
+<p>6、ios系统中元素被触摸时产生的半透明灰色遮罩怎么去掉<br>ios用户点击一个链接，会出现一个半透明灰色遮罩, 如果想要禁用，可设置-webkit-tap-highlight-color的alpha值为0，也就是属性值的最后一位设置为0就可以去除半透明灰色遮罩<br>a,button,input,textarea{-webkit-tap-highlight-color: rgba(0,0,0,0)}</p>
+<p>7、部分android系统中元素被点击时产生的边框怎么去掉<br>android用户点击一个链接，会出现一个边框或者半透明灰色遮罩, 不同生产商定义出来额效果不一样，可设置-webkit-tap-highlight-color的alpha值为0去除部分机器自带的效果<br>a,button,input,textarea{<br>    -webkit-tap-highlight-color: rgba(0,0,0,0)<br>    -webkit-user-modify:read-write-plaintext-only;<br>}<br>-webkit-user-modify有个副作用，就是输入法不再能够输入多个字符<br>另外，有些机型去除不了，如小米2<br>对于按钮类还有个办法，不使用a或者input标签，直接用div标签</p>
+<p>8、winphone系统a、input标签被点击时产生的半透明灰色背景怎么去掉</p>
+<meta name="msapplication-tap-highlight" content="no">
+
+<p>9、webkit表单元素的默认外观怎么重置<br>.css{-webkit-appearance:none;}</p>
+<p>10、webkit表单输入框placeholder的颜色值能改变么<br>input::-webkit-input-placeholder{color:#AAAAAA;}<br>input:focus::-webkit-input-placeholder{color:#EEEEEE;}</p>
+<p>11、webkit表单输入框placeholder的文字能换行么<br>ios可以，android不行~</p>
+<ol>
+<li><p>关闭iOS键盘首字母自动大写<br>在iOS中，默认情况下键盘是开启首字母大写的功能的，如果启用这个功能，可以这样：</p>
+<input type="text" autocapitalize="off">
+</li>
+<li><p>关闭iOS输入自动修正<br>和英文输入默认自动首字母大写那样，IOS还做了一个功能，默认输入法会开启自动修正输入内容，这样的话，用户经常要操作两次。如果不希望开启此功能，我们可以通过input标签属性来关闭掉：</p>
+<input type="text" autocorrect="off"> 
+</li>
+<li><p>禁止文本缩放<br>当移动设备横竖屏切换时，文本的大小会重新计算，进行相应的缩放，当我们不需要这种情况时，可以选择禁止：<br>html {<br>　　        -webkit-text-size-adjust: 100%;<br>}<br>需要注意的是，PC端的该属性已经被移除，该属性在移动端要生效，必须设置 `meta viewport’。</p>
+</li>
+<li><p>移动端如何清除输入框内阴影<br>在iOS上，输入框默认有内部阴影，但无法使用 box-shadow 来清除，如果不需要阴影，可以这样关闭：<br>input,<br>textarea {<br>　　border: 0;<br>　　-webkit-appearance: none;<br>}</p>
+</li>
+<li><p>快速回弹滚动<br>我们先来看看回弹滚动在手机浏览器发展的历史：<br>早期的时候，移动端的浏览器都不支持非body元素的滚动条，所以一般都借助 iScroll;<br>Android 3.0/iOS解决了非body元素的滚动问题，但滚动条不可见，同时iOS上只能通过2个手指进行滚动；<br>Android 4.0解决了滚动条不可见及增加了快速回弹滚动效果，不过随后这个特性又被移除；<br>iOS从5.0开始解决了滚动条不可见及增加了快速回弹滚动效果<br>在iOS上如果你想让一个元素拥有像 Native 的滚动效果，你可以这样做：<br>.xxx {</p>
+<pre><code>overflow: auto; 
+-webkit-overflow-scrolling: touch;
+</code></pre><p>}<br>PS：iScroll用过之后感觉不是很好，有一些诡异的bug，这里推荐另外一个 iDangero Swiper，这个插件集成了滑屏滚动的强大功能（支持3D），而且还有回弹滚动的内置滚动条，官方地址：<br>iDangero</p>
+</li>
+<li><p>移动端禁止选中内容<br>如果你不想用户可以选中页面中的内容，那么你可以在css中禁掉：<br>.user-select-none {<br>-webkit-user-select: none;<br>-moz-user-select: none;<br>-ms-user-select: none;<br>}</p>
+</li>
+<li><p>移动端取消touch高亮效果<br>在做移动端页面时，会发现所有a标签在触发点击时或者所有设置了伪类 :active 的元素，默认都会在激活状态时，显示高亮框，如果不想要这个高亮，那么你可以通过css以下方法来进行全局的禁止：<br>html {<br>-webkit-tap-highlight-color: rgba(0, 0, 0, 0);<br>}<br>但这个方法在三星的机子上无效，有一种妥协的方法是把页面非真实跳转链接的a标签换成其它标签，可以解决这个问题。</p>
+</li>
+<li><p>如何禁止保存或拷贝图像（IOS）<br>通常当你在手机或者pad上长按图像 img ，会弹出选项 存储图像 或者 拷贝图像，如果你不想让用户这么操作，那么你可以通过以下方法来禁止：<br>img { -webkit-touch-callout: none; }</p>
+</li>
+</ol>
+<p>20.模拟按钮hover效果<br>移动端触摸按钮的效果，可明示用户有些事情正要发生，是一个比较好体验，但是移动设备中并没有鼠标指针，使用css的hover并不能满足我们的需求，还好国外有个激活css的active效果，代码如下，<br>&lt;!DOCTYPE html&gt;</p>
+<html><br><head><br><meta charset="utf-8"><br><meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"><br><meta content="yes" name="apple-mobile-web-app-capable"><br><meta content="black" name="apple-mobile-web-app-status-bar-style"><br><meta content="telephone=no" name="format-detection"><br><meta content="email=no" name="format-detection"><br><style type="text/css"><br>a{-webkit-tap-highlight-color: rgba(0,0,0,0);}<br>.btn-blue{display:block;height:42px;line-height:42px;text-align:center;border-radius:4px;font-size:18px;color:#FFFFFF;background-color: #4185F3;}<br>.btn-blue:active{background-color: #357AE8;}<br></style><br></head><br><body><br><br><div class="btn-blue">按钮</div><br><br><script type="text/javascript"><br>document.addEventListener(“touchstart”, function(){}, true)<br></script><br></body><br></html><br>兼容性ios5+、部分android 4+、winphone 8<br>要做到全兼容的办法，可通过绑定ontouchstart和ontouchend来控制按钮的类名<br>&lt;!DOCTYPE html&gt;<br><html><br><head><br><meta charset="utf-8"><br><meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"><br><meta content="yes" name="apple-mobile-web-app-capable"><br><meta content="black" name="apple-mobile-web-app-status-bar-style"><br><meta content="telephone=no" name="format-detection"><br><meta content="email=no" name="format-detection"><br><style type="text/css"><br>a{-webkit-tap-highlight-color: rgba(0,0,0,0);}<br>.btn-blue{display:block;height:42px;line-height:42px;text-align:center;border-radius:4px;font-size:18px;color:#FFFFFF;background-color: #4185F3;}<br>.btn-blue-on{background-color: #357AE8;}<br></style><br></head><br><body><br><br><div class="btn-blue">按钮</div><br><br><script type="text/javascript"><br>var btnBlue = document.querySelector(“.btn-blue”);<br>btnBlue.ontouchstart = function(){<br>    this.className = “btn-blue btn-blue-on”<br>}<br>btnBlue.ontouchend = function(){<br>    this.className = “btn-blue”<br>}<br></script><br></body><br></html>
+
+<p>21.屏幕旋转的事件和样式<br>事件<br>window.orientation，取值：正负90表示横屏模式、0和180表现为竖屏模式；<br>window.onorientationchange = function(){<br>            switch(window.orientation){<br>                case -90:<br>                case 90:<br>                alert(“横屏:” + window.orientation);<br>                case 0:<br>                case 180:<br>                alert(“竖屏:” + window.orientation);<br>                break;<br>            }<br>}<br>样式<br>//竖屏时使用的样式<br>@media all and (orientation:portrait) {<br>    .css{}<br>}</p>
+<p>//横屏时使用的样式<br>@media all and (orientation:landscape) {<br>    .css{}<br>}</p>
+<p>22.audio元素和video元素在ios和andriod中无法自动播放<br>应对方案：触屏即播<br>$(‘html’).one(‘touchstart’,function(){<br>    audio.play()<br>})</p>
+<p>23.摇一摇功能<br>HTML5 deviceMotion：封装了运动传感器数据的事件，可以获取手机运动状态下的运动加速度等数据。</p>
+<p>24.手机拍照和上传图片</p>
+<p><input type="file">的accept 属性<br><!-- 选择照片 --></p>
+<p><input type="file" accept="image/*"><br><!-- 选择视频 --></p>
+<p><input type="file" accept="video/*"><br>使用总结：<br>ios 有拍照、录像、选取本地图片功能<br>部分android只有选取本地图片功能<br>winphone不支持<br>input控件默认外观丑陋</p>
+<ol>
+<li><p>消除transition闪屏<br>.css{</p>
+<p>-webkit-transform-style: preserve-3d;</p>
+<p>-webkit-backface-visibility: hidden;<br>}<br>开启硬件加速<br>解决页面闪白<br>保证动画流畅<br>.css {<br> -webkit-transform: translate3d(0, 0, 0);<br> -moz-transform: translate3d(0, 0, 0);<br> -ms-transform: translate3d(0, 0, 0);<br> transform: translate3d(0, 0, 0);<br>}<br>设计高性能CSS3动画的几个要素<br>尽可能地使用合成属性transform和opacity来设计CSS3动画，<br>不使用position的left和top来定位<br>利用translate3D开启GPU加速</p>
+</li>
+<li><p>android 上去掉语音输入按钮<br>input::-webkit-input-speech-button {display: none}</p>
+</li>
+</ol>
+<p>框架</p>
+<ol>
+<li><p>移动端基础框架<br>zepto.js 语法与jquery几乎一样，会jquery基本会zepto~<br>iscroll.js 解决页面不支持弹性滚动，不支持fixed引起的问题~ 实现下拉刷新，滑屏，缩放等功能~<br>underscore.js 该库提供了一整套函数式编程的实用功能，但是没有扩展任何JavaScript内置对象。<br>fastclick 加快移动端点击响应时间<br>animate.css CSS3动画效果库<br>Normalize.css Normalize.css是一种现代的、CSS reset为HTML5准备的优质替代方案</p>
+</li>
+<li><p>滑屏框架<br>适合上下滑屏、左右滑屏等滑屏切换页面的效果<br>slip.js<br>iSlider.js<br>fullpage.js<br>swiper</p>
+</li>
+</ol>
+<p>3.瀑布流框架<br>masonry</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/js/" rel="tag">#js</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/12/xin/" rel="next" title="新的目标">
+                <i class="fa fa-chevron-left"></i> 新的目标
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/12/移动端Tips/"
+           data-title="移动端开发TIPS" data-url="http://roverk.com/2016/09/12/移动端Tips/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/head_icon.jpg"
+               alt="ROVER" />
+          <p class="site-author-name" itemprop="name">ROVER</p>
+          <p class="site-description motion-element" itemprop="description">做一个有追求的D</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ROVER</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">ROVER</a> 提供支持<(￣ˇ￣)/
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="/cross.html">
+    NexT.Mist
+  </a>
+</div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":["mshare","tsina","weixin","tqq","bdhome","fbook","linkedin","copy"],"bdPic":"","bdStyle":"2","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"left","bdTop":"153.5"},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  };
+  (function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"roverk"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("04UOIOSVxMIXry5PTLcNda02-gzGzoHsz", "nmOv88975Di5DDS9UXCu9Kob");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
